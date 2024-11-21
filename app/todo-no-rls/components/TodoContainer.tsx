@@ -1,11 +1,9 @@
 "use client";
-import { updateTodos } from "@/apis/todos-no-rls";
 import React, { useEffect } from "react";
+import useTodosController from "../hooks/useTodosController";
 
 const TodoContainer = () => {
-  useEffect(() => {
-    updateTodos(8, "TodoUpdate 함");
-  }, []);
+  const { loading, todos } = useTodosController();
   return <div>TodoContainer</div>;
 };
 
