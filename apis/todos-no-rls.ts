@@ -2,7 +2,6 @@
 // 위의 use client를 안쓰면 해당 api 는 server의 api 로 판단 하므로 client로 판단하길 원한다면 적어놔야 함
 
 import { createSupabaseBrowerClient } from "@/lib/client/supabase";
-import { TbRulerMeasure } from "react-icons/tb";
 
 // todoList 가져오기
 export const getTodos = async () => {
