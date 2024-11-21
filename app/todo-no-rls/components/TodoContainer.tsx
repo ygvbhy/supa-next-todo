@@ -1,10 +1,10 @@
 "use client";
-import { getTodosbySearch } from "@/apis/todos-no-rls";
+import { updateTodos } from "@/apis/todos-no-rls";
 import React, { useEffect } from "react";
 
 const TodoContainer = () => {
   useEffect(() => {
-    getTodosbySearch("next");
+    updateTodos(8, "TodoUpdate 함");
   }, []);
   return <div>TodoContainer</div>;
 };
