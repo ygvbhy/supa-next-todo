@@ -1,10 +1,10 @@
 "use client";
-import { getTodos } from "@/apis/todos-no-rls";
+import { getTodosbySearch } from "@/apis/todos-no-rls";
 import React, { useEffect } from "react";
 
 const TodoContainer = () => {
   useEffect(() => {
-    getTodos();
+    getTodosbySearch("next");
   }, []);
   return <div>TodoContainer</div>;
 };
