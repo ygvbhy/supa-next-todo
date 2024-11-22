@@ -10,6 +10,5 @@ export const GET = async () => {
     .is("deleted_at", null)
     .order("id", { ascending: false });
 
-  console.log("todo GET API income", result);
   return NextResponse.json({ ...result });
 };
