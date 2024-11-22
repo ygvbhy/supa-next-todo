@@ -7,7 +7,7 @@ const TodoContainer = () => {
   const { loading, todos } = useTodosController();
   return (
     <div>
-      <TodoList owerUserId="123123" />
+      <TodoList owerUserId="123123" loading={loading} todoListData={todos} />
     </div>
   );
 };
