@@ -41,12 +41,12 @@ const TodoList = ({
           )}
         </article>
         <article className="flex flex-col sm:flex-row gat-4 mt-8">
-          <div className="flex flex-1 h-[60px] ">
+          <div className="flex flex-1 h-[60px] mr-3">
             <input
               type="text"
               className="p-4 flex-1 bg-[#f7cb66] border border-black rounded-l-2xl font-bold"
             />
-            <div className="w-[60px] flex justify-center items-center bg-dark rounded-r-2xl cursor-pointer">
+            <div className="w-[60px] flex justify-center items-center bg-black rounded-r-2xl cursor-pointer">
               <IoSearchOutline size={40} color="#fff" />
             </div>
           </div>
@@ -56,9 +56,16 @@ const TodoList = ({
         </article>
         <div className="h-[2px] my-10 bg-black"></div>
         {todoListData?.length >= 1 ? (
-          <ul>
-            {(todoListData && []).map((todo) => {
-              return <TodoListItem key={todo?.id} todo={todo} />;
+          <ul className="flex flex-col gap-6">
+            {todoListData.map((todo) => {
+              return (
+                <TodoListItem
+                  key={todo?.id}
+                  todo={todo}
+                  onDelete={() => {}}
+                  onUpdate={() => {}}
+                />
+              );
             })}
           </ul>
         ) : (
