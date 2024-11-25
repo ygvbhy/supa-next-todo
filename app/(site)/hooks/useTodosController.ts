@@ -8,7 +8,7 @@ import {
 import { Database } from "@/types/database.types";
 import { useState, useEffect } from "react";
 
-type TodoDto = Database["public"]["Tables"]["todos_no_rls"]["Row"];
+type TodoDto = Database["public"]["Tables"]["todos_with_rls"]["Row"];
 
 const useTodosController = () => {
   const [loading, setLoading] = useState(true);

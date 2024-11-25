@@ -7,7 +7,7 @@ import TodoListItem from "./TodoLIstItem";
 
 const TodoList = ({
   sharedUserFullName = "",
-  owerUserId = "",
+  ownerUserId = "",
   loading = false,
   todoListData,
   isReadOnly = false,
@@ -19,7 +19,7 @@ const TodoList = ({
   const [userSearchInput, setUserSearchInput] = useState();
   const [copiedText, copy] = useCopyToClipboard();
   const handleCopy = () => {
-    const shareLink = `${"todoList공유할 링크"}/share/${owerUserId}`;
+    const shareLink = `${"todoList공유할 링크"}/share/${ownerUserId}`;
     copy(shareLink)
       .then(() => {
         window.alert(`공유 링크 복사 완료! \n ${shareLink}`);
@@ -30,9 +30,9 @@ const TodoList = ({
   };
 
   const handleSearchEnd = () => {
-    onSearch(userSearchInput)
-    setUserSearchInput("")
-  }
+    onSearch(userSearchInput);
+    setUserSearchInput("");
+  };
 
   return (
     <section className=" min-h-[70vh] bg-[#69cfcf]">
@@ -44,7 +44,7 @@ const TodoList = ({
                 {sharedUserFullName && <div>{sharedUserFullName}</div>}
                 Things to do:
               </div>
-              {owerUserId && (
+              {ownerUserId && (
                 <div
                   onClick={handleCopy}
                   className=" font-bold text-[20px] flex flex-row items-center cursor-pointer"
@@ -65,7 +65,10 @@ const TodoList = ({
                     if (e.key === "Enter") handleSearchEnd();
                   }}
                 />
-                <div className="w-[60px] flex justify-center items-center bg-black rounded-r-2xl cursor-pointer" onClick={() => handleSearchEnd()}>
+                <div
+                  className="w-[60px] flex justify-center items-center bg-black rounded-r-2xl cursor-pointer"
+                  onClick={() => handleSearchEnd()}
+                >
                   <IoSearchOutline size={40} color="#fff" />
                 </div>
               </div>
