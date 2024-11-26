@@ -1,7 +1,7 @@
 import {
   createTodos,
   deleteTodosSoft,
-  getTodos,
+  getTodosByUserId,
   getTodosBySearch,
   updateTodos,
 } from "@/actions/todo/todo.action";
@@ -10,14 +10,14 @@ import { useState, useEffect } from "react";
 
 type TodoDto = Database["public"]["Tables"]["todos_with_rls"]["Row"];
 
-const useTodosController = () => {
+const useTodosController = (ownerUserId = "") => {
   const [loading, setLoading] = useState(true);
   const [todos, setTodos] = useState<TodoDto[]>([]);
 
   const onGetTodos = async () => {
     setLoading(true);
     try {
-      const resultTodos = await getTodos();
+      const resultTodos = await getTodosByUserId(ownerUserId);
       if (resultTodos) setTodos(resultTodos);
     } catch (error) {
       console.error(error);
