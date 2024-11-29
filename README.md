@@ -20,20 +20,13 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+## Supabase + Next.js
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Supabase 의 CRUD 의 기능과 사용법을 실습 하기 위한 Next.js 코드
+- Next 와 Supabase 를 연동하여 next의 SSR 과 CSR 등을 실습
+- Supabase 의 로그인 기능을 활용하여  Google 로그인 기능 실습
+- Supabase 의 Auth 안의 profile 을 외래키로 지정한 뒤 작성한 TodoList 를 공유하여 열람 할 수 있는 기능
 
 ## 추가 라이브러리
 
